@@ -1,0 +1,13 @@
+{
+  "name": "astronomyapi-widgets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AstronomyAPI/widgets.git",
+  "author": "anuradha <astroanu2004@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-loader": "^8.0.9",
+    "typescript": "^4.0.5"
+  }
+}

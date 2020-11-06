@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script src="dist/bundle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var client = new AstronomyAPI({
+          basicToken: "<hash>",
+        });
+
+        client.moonPhase(
+          {
+            element: "#moon-phase",
+            format: "png",
+            style: {
+              moonStyle: "sketch",
+              backgroundStyle: "stars",
+              backgroundColor: "red",
+              headingColor: "white",
+              textColor: "white",
+            },
+            observer: {
+              latitude: 40.712772,
+              longitude: -73.935242,
+              date: "2020-10-28",
+            },
+            view: {
+              type: "portrait-simple",
+            },
+          },
+          (re) => {
+            console.log("done", re);
+          }
+        );
+
+        client.starChart(
+          {
+            element: "#star-chart",
+            style: "navy",
+            observer: {
+              latitude: 12.775867,
+              longitude: -23.39733,
+              date: "2012-12-21",
+            },
+            view: {
+              type: "constellation",
+              parameters: {
+                constellation: "ori",
+              },
+            },
+          },
+          (re) => {
+            console.log("done", re);
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="moon-phase"></div>
+    <div id="star-chart"></div>
+  </body>
+</html>

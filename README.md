@@ -1,1 +1,1 @@
-# widgets
+# Astronomy API Widgets
