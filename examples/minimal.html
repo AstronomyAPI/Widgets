@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Minimal implementation</title>
+    <script src="../dist/astronomy-api-widgets.js"></script>
+    <style>
+      div {
+        border: thin solid #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="moon-phase"></div>
+    <div id="star-chart"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var client = new AstronomyAPI({
+          basicToken: "<hash>",
+        });
+
+        client.moonPhase();
+
+        client.starChart();
+      });
+    </script>
+  </body>
+</html>
