@@ -51,4 +51,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-1'
         SOURCE_DIR: 'dist/astronomy-api-widgets.js'
-        DEST_DIR: 'cdn'
+        DEST_DIR: 'cdn/astronomy-api-widgets.js'
