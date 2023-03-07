@@ -109,6 +109,7 @@ const AstronomyAPI = class {
           }
         } else if (this.status == 422) {
           console.error(JSON.parse(this.responseText));
+          el.replaceChildren(that.getPlaceholder("Error"));
         } else {
           console.error("unknown error");
           el.replaceChildren(that.getPlaceholder("Error"));
