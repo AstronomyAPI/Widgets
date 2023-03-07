@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Minimal implementation</title>
+    <script src="../dist/astronomy-api-widgets.js"></script>
+    <style>
+      div {
+        border: thin solid #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="moon-phase-1"></div>
+    <div id="moon-phase-2"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var client = new AstronomyAPI({
+          basicToken: "<hash>",
+        });
+
+        client.moonPhase({
+            element:'#moon-phase-1'
+        });
+
+        client.moonPhase({
+            element:'#moon-phase-2',
+            observer: {
+              latitude: 40.712772,
+              longitude: 74.00642,
+              date: "2023-05-15",
+            }
+        });
+      });
+    </script>
+  </body>
+</html>
