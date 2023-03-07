@@ -194,6 +194,9 @@ const AstronomyAPI = class {
 
   constructor(params: ConfigOptions) {
     this.params = params;
+    if (!params.basicToken || params.basicToken.length < 10) {
+      throw new Error('`basicToken` must be set during construction')
+    }
   }
 };
 
