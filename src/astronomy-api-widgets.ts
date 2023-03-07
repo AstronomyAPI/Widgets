@@ -70,7 +70,7 @@ const AstronomyAPI = class {
   private setContainerSize(
     widgetType: string,
     el: HTMLElement,
-    viewType: string,
+    viewType: string
   ) {
     if (widgetType == "moon-phase") {
       el.style.width = viewType == "portrait-simple" ? "200px" : "260px";
@@ -87,7 +87,7 @@ const AstronomyAPI = class {
     endpoint: string,
     params: object,
     callback: Function,
-    el: HTMLElement,
+    el: HTMLElement
   ) {
     const req = new XMLHttpRequest();
 
@@ -145,7 +145,7 @@ const AstronomyAPI = class {
           type: "portrait-simple",
         },
       },
-      params,
+      params
     );
 
     const el = <HTMLElement>document.querySelector(params.element);
@@ -180,7 +180,7 @@ const AstronomyAPI = class {
           },
         },
       },
-      params,
+      params
     );
 
     const el = <HTMLElement>document.querySelector(params.element);
