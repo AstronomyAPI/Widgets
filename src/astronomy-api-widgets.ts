@@ -121,6 +121,7 @@ const AstronomyAPI = class {
 
     req.setRequestHeader("Content-Type", "application/json");
     req.setRequestHeader("Authorization", `Basic ${this.params.basicToken}`);
+    req.setRequestHeader("x-astronomy-api-source", `widgets`);
 
     req.send(JSON.stringify(params));
   }
